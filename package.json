@@ -1,0 +1,40 @@
+{
+  "name": "santosh-blog",
+  "version": "1.0.0",
+  "description": "Blog of Santosh Bhandari covering articles of lots of technical and programming related stuffs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheLearneer/blog.santoshb.com.np.git"
+  },
+  "keywords": [
+    "blog",
+    "Santosh",
+    "technology",
+    "programming"
+  ],
+  "author": "Santosh Bhandari (contact@santoshb.com.np)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheLearneer/blog.santoshb.com.np/issues"
+  },
+  "homepage": "https://github.com/TheLearneer/blog.santoshb.com.np#readme",
+  "dependencies": {
+    "bootstrap-vue": "^2.3.0",
+    "date-fns": "^2.9.0",
+    "frontmatter-markdown-loader": "^3.1.0",
+    "glob": "^7.1.6",
+    "nuxt": "^2.11.0",
+    "vue-material-design-icons": "^4.4.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2"
+  }
+}
