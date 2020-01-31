@@ -35,6 +35,9 @@
 			</b-col>
 		</b-row>
 		<hr>
+		<div class="pt-5">
+			<AuthorDetilas :id="article.author" />
+		</div>
 	</div>
 </template>
 
@@ -43,7 +46,8 @@ import { format } from 'date-fns';
 
 export default {
 	components: {
-		SocialShare: () => import('@/components/SocialShare')
+		SocialShare: () => import('@/components/SocialShare'),
+		AuthorDetilas: () => import('@/components/Author')
 	},
 	head() {
 		return {

@@ -1,8 +1,6 @@
 <template>
 	<div :class="`container shadow rounded pb-3 h-100 ${featured ? 'bg-gold' : 'bg-gray-300'}`">
-		<!--
-			<b-icon-award v-if="featured" class="pinned-article" scale="5" variant="dark" />
-		-->
+		<b-icon-award v-if="featured" class="pinned-article" scale="5" variant="dark" />
 		<b-row>
 			<b-col sm="12" lg="7">
 				<div class="image-top">
@@ -38,14 +36,12 @@
 
 <script>
 import { format } from 'date-fns';
-//import PinIcon from 'icons/pin';
 
 export default {
 	props: {
 		data: Object,
 		featured: Boolean
 	},
-	// components: { PinIcon },
 	computed: {
 		bannerImg() {
 			return require(`@/assets/img/banner/${this.data.banner}`);
