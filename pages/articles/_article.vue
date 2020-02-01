@@ -97,8 +97,4 @@ export default {
 	padding-top: 3rem;
 	padding-bottom: 0.5rem;
 }
-.topic-badge, .topic-badge:hover {
-	text-decoration: none;
-	color: white;
-}
 </style>

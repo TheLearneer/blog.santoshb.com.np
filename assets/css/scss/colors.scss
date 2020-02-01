@@ -115,9 +115,6 @@ $colors: (
 	@each $weight, $val in $values {
 		.bg-#{$name}-#{$weight} {
 		    background-color: $val;
-		}				
-		.text-#{$name}-#{$weight} {
-		    color: $val;
 		}
 	}
 }

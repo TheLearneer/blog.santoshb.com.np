@@ -45,22 +45,4 @@ h1, h2 {
 	padding-top: 1.5rem;
 	padding-bottom: 0.5rem;
 }
-.separator {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  padding-top: 50px;
-  padding-bottom: 20px;
-}
-.separator::before, .separator::after {
-  content: '';
-  flex: 1;
-  border-bottom: 1px solid #d9d9d9;
-}
-.separator::before {
-  margin-right: 1em;
-}
-.separator::after {
-  margin-left: 1em;
-}
 </style>
