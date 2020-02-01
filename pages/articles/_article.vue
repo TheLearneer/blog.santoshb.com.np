@@ -7,22 +7,33 @@
 			<small>{{ article.subtitle }}</small>
 		</h4>
 		<hr>
-		<small>{{ updateDate }} ~{{ readTime }} read
-			<div class="float-right">
-				<socialShare link="https://twitter.com/intent/tweet?text=" id="twitter" name="Twitter" />
-			</div>
-		</small>
+		<b-row>
+			<b-col sm="12" lg="6">
+				<small>Created on <b>{{ createDate }}</b> | ~{{ readTime }} read</small>
+			</b-col>
+			<b-col class="text-sm-center">
+				<div class="float-lg-right">
+					<socialShare link="https://twitter.com/intent/tweet?text=" id="twitter" name="Twitter" />
+				</div>
+			</b-col>
+		</b-row>
 		<hr>
 		<component :is="dynamicComponent" />
 		<hr>
-		<div>
-			<small>Created on <b>{{ createDate }}</b></small>
-			<b-badge class="float-right mr-2 text-capitalize" pill variant="secondary" v-for="badge in article.tags" :key="badge">
-				<!--<n-link :to="getTopicLink(badge)" class="topic-badge mx-1">-->
-					{{ badge }}
-				<!--</n-link>-->
-			</b-badge>
-		</div>
+		<b-row>
+			<b-col v-if="article.date.updated" sm="12" lg="6">
+				<small>Updated on <b>{{ updateDate }}</b></small>
+			</b-col>
+			<b-col>
+				<div class="float-right">
+					<b-badge class="mr-2 text-capitalize" pill variant="secondary" v-for="badge in article.tags" :key="badge">
+						<!--<n-link :to="getTopicLink(badge)" class="topic-badge mx-1">-->
+							{{ badge }}
+						<!--</n-link>-->
+					</b-badge>
+				</div>
+			</b-col>
+		</b-row>
 		<hr>
 	</div>
 </template>
@@ -50,7 +61,7 @@ export default {
 			return `${Math.floor(this.article.html.replace( /[^\w ]/g, "" ).split( /\s+/ ).length / 228) + 1} min`;
 		},
 		updateDate() {
-			return this.article.date.updated ? `Updated on ${format(new Date(this.article.date.updated), 'MMMM do, yyyy')} | ` : '';
+			return this.article.date.updated ? format(new Date(this.article.date.updated), 'MMMM do, yyyy') : '';
 		},
 		createDate() {
 			return format(new Date(this.article.date.created), 'MMMM do, yyyy');
