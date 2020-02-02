@@ -9,7 +9,17 @@
 		<hr>
 		<b-row>
 			<b-col sm="12" lg="6">
-				<small>Created on <b>{{ createDate }}</b> | ~{{ readTime }} read</small>
+				<small>
+					<span v-if="!updateDate">
+						Created on <b>{{ createDate }}</b>
+					</span>
+					<span v-if="updateDate">
+						Last edited on <b>{{ updateDate }}</b>
+					</span>
+					<span>
+						| ~{{ readTime }} read
+					</span>
+				</small>
 			</b-col>
 			<b-col class="text-sm-center">
 				<div class="float-lg-right">
@@ -21,8 +31,8 @@
 		<component :is="dynamicComponent" />
 		<hr>
 		<b-row>
-			<b-col v-if="article.date.updated" sm="12" lg="6">
-				<small>Updated on <b>{{ updateDate }}</b></small>
+			<b-col v-if="updateDate" sm="12" lg="6">
+				<small>Originally created on <b>{{ createDate }}</b></small>
 			</b-col>
 			<b-col>
 				<div class="float-right">
@@ -65,7 +75,7 @@ export default {
 			return `${Math.floor(this.article.html.replace( /[^\w ]/g, "" ).split( /\s+/ ).length / 228) + 1} min`;
 		},
 		updateDate() {
-			return this.article.date.updated ? format(new Date(this.article.date.updated), 'MMMM do, yyyy') : '';
+			return this.article.date.updated ? format(new Date(this.article.date.updated), 'MMMM do, yyyy') : null;
 		},
 		createDate() {
 			return format(new Date(this.article.date.created), 'MMMM do, yyyy');
