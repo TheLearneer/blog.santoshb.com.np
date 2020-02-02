@@ -7,7 +7,7 @@ banner: hello-world.png
 date:
     created: 2020-01-01
 summary: >
-  It's a short introduction about a person who loves to do many things and currently has started bloggin.
+  It is a short introduction about a person who loves to do many things and currently has started bloggin.
   I Hope you will probably enjoy it.
 tags:
   - personal

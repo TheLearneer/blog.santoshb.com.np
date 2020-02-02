@@ -6,8 +6,8 @@ export default {
 	// basic configs...
 	mode: 'universal',
 	css: [
-		//'@/assets/css/index',
-		'@/assets/css/scss/index'
+		//'@/assets/style/index',
+		'@/assets/style/scss/index'
 	],
 	// Other configs...
 	head,
@@ -23,8 +23,6 @@ export default {
 					mode: ['html', 'vue-component']
 				}
 			});
-			// Handling shorloading of material-design-icons
-			config.resolve.alias['icons'] = path.join(this.buildContext.options.rootDir, "node_modules/vue-material-design-icons");
 		}
 	},
 	generate: {

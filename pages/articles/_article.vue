@@ -61,7 +61,20 @@ export default {
 	},
 	head() {
 		return {
-			title: this.article.title
+			title: this.completeTitle,
+			meta: [				
+				{ hid: 'description', name: 'description', content: this.articleDescription },
+				// Open-graph
+				{ hid: 'og:title', name: 'og:title', content: this.completeTitle },
+				{ hid: 'og:description', name: 'og:description', content: this.articleDescription },
+				{ hid: 'og:url', name: 'og:url', content: this.articleUrl },
+				{ hid: 'og:image', name: 'og:image', content: `https://blog.santoshb.com.np${this.imageLink}` },
+				// Twitter				
+				{ hid: 'twitter:title', name: 'twitter:title', content: this.completeTitle },
+				{ hid: 'twitter:description', name: 'twitter:description', content: this.articleDescription },
+				{ hid: 'twitter:url', name: 'twitter:url', content: this.articleUrl },
+				{ hid: 'twitter:image', name: 'twitter:image', content: `https://blog.santoshb.com.np${this.imageLink}` }
+			]
 		}
 	},
     data () {
@@ -71,6 +84,18 @@ export default {
       }
     },
 	computed: {
+		articleDescription() {
+			return this.article.summary.replace(/<[^>]*>?/gm, '')
+		},
+		articleUrl() {
+			return `https://blog.santoshb.com.np${this.$route.path}`
+		},
+		imageLink() {
+			return require(`@/assets/img/banner/${this.article.banner}`);
+		},
+		completeTitle() {
+			return `${this.article.title}${this.article.subtitle ? ` - ${this.article.subtitle}` : ''}`;
+		},
 		readTime() {
 			return `${Math.floor(this.article.html.replace( /[^\w ]/g, "" ).split( /\s+/ ).length / 228) + 1} min`;
 		},
@@ -82,12 +107,12 @@ export default {
 		}
 	},
     created () {
-      const post = require(`~/contents/articles/${this.$route.params.article}.md`)
-      const newData = {};
-	  for (const attr of Object.keys(post.attributes)) newData[attr] = post.attributes[attr];
-	  newData.html = post.html;
-	  this.dynamicComponent = post.vue.component;
-	  this.article = newData;
+		const post = require(`~/contents/articles/${this.$route.params.article}.md`)
+		const newData = {};
+		for (const attr of Object.keys(post.attributes)) newData[attr] = post.attributes[attr];
+		newData.html = post.html;
+		this.dynamicComponent = post.vue.component;
+		this.article = newData;
     },
 	methods: {
 		getTopicLink(topic) {

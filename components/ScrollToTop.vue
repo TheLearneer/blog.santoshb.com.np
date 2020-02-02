@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import ArrowUp from 'icons/ArrowUpBold';
+import ArrowUp from 'vue-material-design-icons/ArrowUpBold.vue';
 
 export default {
 	name: 'ScrollToTop',
