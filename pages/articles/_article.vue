@@ -97,7 +97,7 @@ export default {
 			return `${this.article.title}${this.article.subtitle ? ` - ${this.article.subtitle}` : ''}`;
 		},
 		readTime() {
-			return `${Math.floor(this.article.html.replace( /[^\w ]/g, "" ).split( /\s+/ ).length / 228) + 1} min`;
+			return `${Math.ceil(this.article.html.replace( /[^\w ]/g, "" ).split( /\s+/ ).length / 228) + 1} min`;
 		},
 		updateDate() {
 			return this.article.date.updated ? format(new Date(this.article.date.updated), 'MMMM do, yyyy') : null;
