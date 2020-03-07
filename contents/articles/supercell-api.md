@@ -21,7 +21,7 @@ Thus to overcome that issue, I have though of this work around.
 
 ## How does it actually work ??
 - It logins to the developer portal using the mail and password provided through the config.
-- It then fetches the available API keys and checks if any has the current IP whitelisted.
+- It then fetches the available API keys and checks if any key has the current IP whitelisted.
 - If found returns the token, otherwise generate a new one for the current IP and return it.
 - All the requests to the Official API are made then using the generated key
 
