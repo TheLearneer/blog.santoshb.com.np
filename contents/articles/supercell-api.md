@@ -26,6 +26,13 @@ Thus to overcome that issue, I have though of this work around.
 - If found returns the token, otherwise generate a new one for the current IP and return it.
 - All the requests to the Official API are made then using the generated key
 
+## That sounds risky!!
+Well I am not sure about it to be honest! There are few things which you should always know:
+- You are using your mail and password to login to the developer site so you should always make sure then are not publicly posted anywhere! **IMP**
+- This is not how supercell want's you to access the developer site and create a token and supercell might take actions against you, so make sure to use alternative mails for this purpose..
+- Use this method until and unless you are able to get yourself with a `static IP`. If you get one, try to opt out of this method as soon as possible!
+If you are doing what is mentioned above, you should be safe!
+
 ## What extra can I do with it ??
 You can **customize** the service as per your needs.
 
