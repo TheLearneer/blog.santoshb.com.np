@@ -6,6 +6,7 @@ author: santosh-bhandari
 banner: supercell-api.png
 date:
     created: 2020-03-07
+    updated: 2020-03-08
 summary: >
   Using the supercell games'  API requires a static IP, which means users doing hobby projects will not be able to use them.
   Not long after reading this article. I personally have got it working and so will you.
@@ -39,6 +40,7 @@ The first thing is, the service is built using `express` and contains a `index.j
 
 But well I don't think you will be running it on your local machine. So I have some steps you can follow to host it over heroku. I do consider you already know about **heroku** and **github**.
 - Fork this repo <a href="https://github.com/TheLearneer/supercell-api" target="_blank">TheLearneer/supercell-api</a>
+- Update the `config.js` to enable the API you want to use
 - Create a new project at heroku
 - Connect the heroku app to the forked repo (one at your profile)
 - Enable automatic deploys and select `heroku` branch for it (_The heroku branch is setup for hosting at heroku_)
