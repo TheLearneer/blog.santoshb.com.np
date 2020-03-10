@@ -15,6 +15,7 @@ export default {
 		cacheTime: 1000 * 60 * 60 * 2,
 		trailingSlash: true,
 		gzip: true,
+		hostname: 'https://blog.santoshb.com.np',
 		routes: async () => {
 			const articles = await scan('contents/articles', { filter: (stats, path) => stats.isFile() && extname(path) === '.md' });
 			const sitemapList = [...articles.keys()].map((file) => ({
