@@ -1,12 +1,13 @@
 <template>
 	<div class="container pb-lg-5">
-		<b-row align-h="center" id="blog-list" class="mt-5">
+		<b-row align-h="center" id="blog-list" class="mt-5 mb-5">
 			<b-col>
 				<div v-for="(post, index) of pageCollection" :key="post.id" class="pb-3 pt-5">
 					<blogCard :data="post" />
 				</div>
 			</b-col>
 		</b-row>
+		<adsbygoogle />
 	</div>
 </template>
 

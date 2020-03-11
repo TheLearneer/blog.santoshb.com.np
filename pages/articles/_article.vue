@@ -45,9 +45,10 @@
 			</b-col>
 		</b-row>
 		<hr>
-		<div class="pt-5">
+		<div class="pt-5 pb-5">
 			<AuthorDetilas :id="article.author" />
 		</div>
+		<adsbygoogle />
 	</div>
 </template>
 
