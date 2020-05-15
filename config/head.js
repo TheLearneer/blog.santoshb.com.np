@@ -2,6 +2,7 @@ const blogDescription = 'Blog featuring programming and Technology related stuff
 
 export default {
 	titleTemplate: (title) => title ? `${title} | Santosh Bhandari Blog` : 'Blog - Santosh Bhandari | Technology and Programming related articles',
+	link: [{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Acme|Slabo+27px&display=swap' }],
 	meta: [
 		{ charset: 'utf-8' },
 		{ name: 'viewport', content: 'width=device-width, initial-scale=1' },

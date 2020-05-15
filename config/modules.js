@@ -15,8 +15,10 @@ export default {
 	// Sitemap configuration
 	sitemap: {
 		cacheTime: 1000 * 60 * 60 * 2,
-		trailingSlash: true,
 		gzip: true,
-		hostname: 'https://blog.santoshb.com.np'
+		hostname: 'https://blog.santoshb.com.np',
+		exclude: [
+			'/articles/page'
+		]
 	}
 }

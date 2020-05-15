@@ -5,9 +5,9 @@ import path from 'path';
 export default {
 	// basic configs...
 	mode: 'universal',
-	css: [
-		//'@/assets/style/index',
-		'@/assets/style/scss/index'
+	css: ['@/assets/style/index'],
+	plugins: [
+		{ src: '@/plugins/disqus', mode: 'client' }
 	],
 	// Other configs...
 	head,
@@ -30,12 +30,10 @@ export default {
 	}
 }
 
-
 function getRoutes() {
-	// Department routes
-	const programs = glob.sync('articles/*.md', { cwd: 'contents' }).map((file) => {
-		return `/articles/${path.basename(file, '.md')}`;
-	});
-	// Returning the list...
-	return [].concat(programs).sort();
+	const articles = glob.sync('*.md', { cwd: 'contents' }).map((file) => `/articles/${path.basename(file, '.md')}`);
+	const articlePages = [];
+	const pages = Math.ceil(articles.length / 5);
+	if (pages > 1) for (let i = 0; i < pages; i++) articlePages.push(`/articles/page/${i+1}`);
+	return [].concat(articles, articlePages);
 }

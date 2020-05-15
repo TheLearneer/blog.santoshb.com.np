@@ -19,41 +19,41 @@ Hacktoberfest is an festive for open-source programmers and developers organized
 
 I tried gathering some basic and useful information required to learn about this awesome event. There is lot more to learn about this event, but I hope this will provide you some basic knowledge about the event.
 
-## What is Hacktoberfest?
+## **What is Hacktoberfest?**
 Hacktoberfest is a month-long celebration of open source software run by DigitalOcean with various other partners.
 
-### Who can participate?
+### **Who can participate?**
 Hacktoberfest is open to everyone! **YOU ARE IN !!**
 
-### How can I participate?
+### **How can I participate?**
 All you need to participate is will to contribute to open source and a github account.
 You simply register at <a href="https://hacktoberfest.digitalocean.com">hacktoberfest.digitalocean.com</a> using your github account.
 
 For participating in the challenge you will have to submit Pull Requests(PR) in any _public_ Github hosted repository.
 
-### When can I participate?
+### **When can I participate?**
 You can participate by signing up anytime between October 1 and October 31. All of yours contributions within this time preiod will be counted even if those were before you sign up for the event.
 
-### Can I organize a hacktoberfest event?
+### **Can I organize a hacktoberfest event?**
 You surely can as it is a great way to support the open source community.
 
 Explore <a href="https://hacktoberfest.digitalocean.com/eventkit" title="Hacktoberfest event kit">Hacktoberfest Event Kit</a> and <a href="https://youtu.be/IC-sCZrDz04" title="Hacktoberfest Webinar">watch the Webinar</a> to learn how to successfully organize a Hacktoberfest gathering around you.
 
 You can then <a href="https://hacktoberfest.digitalocean.com/eventkit#form" title="Submit hacktoberfest event">submit your event</a> to get exposure of your event and ger more attendees.
 
-### Can I join a hacktoberfest event?
+### **Can I join a hacktoberfest event?**
 You surely can if there is one happening around you.
 
 To lookup for events happening around you can <a href="https://hacktoberfest.digitalocean.com/events">visit here!</a>
 
-### What do I get for participating ?
+### **What do I get for participating?**
 There are lots of things you will get for participating:
 - Gain more knowledge about open source and open source contributions
 - Gain more knowledge about github and community based contributions
 - Thanks for the project you contributed to
 - **Free Swag Reward from the hacktoberfest team** (*Terms apply*)
 
-### How do I get the T-shirt?
+### **How do I get the T-shirt?**
 To obtain the T-shirt you will have to complete specific amount of contributions on Github.
 *Stickers are included with the T-shirt as well*
 
@@ -61,10 +61,10 @@ The amount of PRs to be completed are:
 - Hacktoberfest No.4 (2018): **4**
 - Hacktoberfest No.5 (2019): **5**
 
-### When will I receive the T-shirt?
+### **When will I receive the T-shirt?**
 T-shirts are awarded on a first-come, first-serve basis to the first 50,000 participants who successfully completed the Hacktoberfest challenge. You will be receiving mail when you have completed the challenge. Further details will be provided with the mail.
 
-### I am new to Open source, how should I start?
+### **I am new to Open source, how should I start?**
 Believe me, everyone once was! You just need to get started with proper resources and guides.
 
 Here are some good resources for you:
@@ -76,7 +76,7 @@ Here are some good resources for you:
 - <a href="http://yourfirstpr.github.io/">Your First PR</a>
 - <a href="https://github.com/mungell/awesome-for-beginners">Awesome for Beginners</a>
 
-### I completed X-number of PR, but tracking page shows I am not done?
+### **I completed X-number of PR, but tracking page shows I am not done?**
 Make sure your PRs are not among these:
 - PRs that are automated (e.g. scripted opening PRs to remove whitespace/optimize images)
 - PRs that are disruptive (e.g. taking someone else's branch/commits and making a PR)
@@ -84,5 +84,5 @@ Make sure your PRs are not among these:
 - Something that's clearly an attempt to simply +1 your PR count for October
 - Last but not least, one PR to fix a typo is fine. 5 PRs to remove a stray whitespace... not
 
-## Is there anything else I need to know ??
+## **Is there anything else I need to know ??**
 These are just the basics you should be knowing about Hacktoberfest. But surely there are lot more things which is better if known. You can learn more about the Hacktoberfest event <a href="https://hacktoberfest.digitalocean.com/details" title="Hacktoberfest details">HERE..</a> and <a href="https://hacktoberfest.digitalocean.com/faq" title="Hacktoberfest FAQ">HERE..</a>

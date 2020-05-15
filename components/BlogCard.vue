@@ -1,6 +1,5 @@
 <template>
-	<div :class="`container shadow rounded pb-3 h-100 ${featured ? 'bg-gold' : 'bg-gray-300'}`">
-		<b-icon-award v-if="featured" class="pinned-icon" scale="3" variant="dark" />
+	<div class="rounded shadow pb-3 h-100 bg-gray-300">
 		<b-row>
 			<b-col sm="12" lg="7">
 				<div class="image-top">
@@ -8,27 +7,27 @@
 				</div>
 			</b-col>
 			<b-col>
-				<div class="container pt-lg-3">
-					<h2 class="text-center">
-						<n-link :to="articleLink">{{ data.title }}</n-link>
-					</h2>
+				<b-container class="pt-lg-3">
+					<p class="h2 text-center font-weight-bold">{{ data.title }}</p>
 					<p class="text-center text-muted" v-if="data.subtitle">
-						<i>{{ data.subtitle }}</i>
+						<span class="font-italic">{{ data.subtitle }}</span>
 					</p>
-					<hr>
-					<div class="text-center">
-						<b-badge class="mr-2 text-capitalize" pill variant="secondary" v-for="badge in data.tags" :key="badge">
-							<!--<n-link :to="getTopicLink(badge)" class="mx-1 topic-badge">-->
-								{{ badge }}
-							<!--</n-link>-->
+					<div class="border-top-bottom">
+						<b-icon icon="calendar" />
+						<span class="small ml-1 font-weight-bold">{{ createDate }}</span>
+					</div>
+					<div class="my-3">
+						<span v-html="data.summary" />
+						<span class="ml-3 font-weight-bold">
+							<n-link :to="`/articles/${data.id}`">Read more...</n-link>
+						</span>
+					</div>
+					<div align="right" class="border-top-bottom">
+						<b-badge class="mx-1 my-1 text-capitalize" pill variant="dark" v-for="badge in data.tags" :key="badge">
+							{{ badge }}
 						</b-badge>
 					</div>
-					<hr>
-					<span v-html="data.summary" />
-					<p>
-						<n-link :to="articleLink">Read more...</n-link>
-					</p>
-				</div>
+				</b-container>
 			</b-col>
 		</b-row>
 	</div>
@@ -39,26 +38,14 @@ import { format } from 'date-fns';
 
 export default {
 	props: {
-		data: Object,
-		featured: Boolean
+		data: Object
 	},
 	computed: {
 		bannerImg() {
 			return require(`@/assets/img/banner/${this.data.banner}`);
 		},
-		articleLink() {
-			return `/articles/${this.data.id}`;
-		},
-		readTime() {
-			return `${Math.floor(this.data.html.replace( /[^\w ]/g, "" ).split( /\s+/ ).length / 228) + 1} min`;
-		}
-	},
-	methods: {
-		getDate(date) {
-			return format(new Date(date), 'MMMM do, yyyy');
-		},
-		getTopicLink(topic) {
-			return `/topics/${topic.toLowerCase().split(' ').join('-')}`;
+		createDate() {
+			return format(new Date(this.data.date.created), 'MMMM do, yyyy');
 		}
 	}
 }
@@ -70,15 +57,5 @@ export default {
 	top: -20px;
 	width: 90%;
 	left: 5%
-}
-a {
-	text-decoration: none;
-}
-.bg-gold {
-	background-color: #F0E68C;
-}
-.pinned-icon {
-	position: absolute;
-	right: 9px;
 }
 </style>

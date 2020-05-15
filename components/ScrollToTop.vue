@@ -1,9 +1,9 @@
 <template>
-	<transition name="fade-slide" mode="out-in" appear>
+	<transition name="fade" mode="out-in" appear>
 		<div class="column is-four-fifths">
 			<div id="scroll-top" @click="scrollTop" >
-				<b-button pill class="scroller-button" variant="danger">
-					<ArrowUp fillColor="#742A2A" />
+				<b-button pill class="scroller-button" variant="info">
+					<b-icon icon="caret-up-fill" />
 				</b-button>
 			</div>
 		</div>
@@ -11,13 +11,8 @@
 </template>
 
 <script>
-import ArrowUp from 'vue-material-design-icons/ArrowUpBold.vue';
-
 export default {
 	name: 'ScrollToTop',
-	components: {
-		ArrowUp
-	},
 	data() {
 		return {
 			visible: false,
@@ -75,10 +70,5 @@ export default {
 	transition: opacity 0.5s, background 0.3s;
 	opacity: 0;
 	z-index: 1;
-}
-.scroller-button:hover {
-	position: relative;
-	box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
-	top: -2px;
 }
 </style>

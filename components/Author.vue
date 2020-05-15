@@ -1,5 +1,5 @@
 <template>
-	<div class="container pt-4 pb-3 text-center shadow bg-gray-200">
+	<div class="container py-4 text-center rounded shadow bg-gray-300">
 		<b-row>
 			<b-col cols="4">
 				<b-img fluid :src="authorImage" width="128" :alt="author.name" class="rounded-circle pb-3" />
@@ -13,7 +13,7 @@
 				</div>
 			</b-col>
 			<b-col>
-				<h3>{{ author.name }}</h3>
+				<h3 class="font-weight-bold">{{ author.name }}</h3>
 				<hr>
 				{{ author.introduction }}
 			</b-col>
@@ -23,7 +23,7 @@
 
 <script>
 import Author from '@/assets/js/author';
-import GithubIcon from 'vue-material-design-icons/GithubFace.vue';
+import GithubIcon from 'vue-material-design-icons/Github.vue';
 import WebsiteIcon from 'vue-material-design-icons/Web.vue';
 
 export default {

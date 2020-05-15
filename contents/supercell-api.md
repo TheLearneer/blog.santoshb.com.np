@@ -20,27 +20,27 @@ Lots of the people using the API are using it personally for hobby projects and 
 
 Thus to overcome that issue, I have though of this work around.
 
-## How does it actually work ??
+## **How does it actually work ??**
 - It logins to the developer portal using the mail and password provided through the config.
 - It then fetches the available API keys and checks if any key has the current IP whitelisted.
 - If found returns the token, otherwise generate a new one for the current IP and return it.
 - All the requests to the Official API are made then using the generated key
 
-## That sounds risky!!
+## **That sounds risky!!**
 Well I am not sure about it to be honest! There are few things which you should always know:
 - You are using your mail and password to login to the developer site so you should always make sure then are not publicly posted anywhere! **IMP**
 - This is not how supercell want's you to access the developer site and create a token and supercell might take actions against you, so make sure to use alternative mails for this purpose..
 - Use this method until and unless you are able to get yourself with a `static IP`. If you get one, try to opt out of this method as soon as possible!
 If you are doing what is mentioned above, you should be safe!
 
-## What extra can I do with it ??
+## **What extra can I do with it ??**
 You can **customize** the service as per your needs.
 
 If you need to save the resposes in some database for analytics purposes then you can simply edit the route files i.e. `{game}/routes/{file}` and customize it as per the need.
 
 You can even add custom routes, remove the routes available or modify the available routes as per the requirements.
 
-## Heard enough! How do I use it ??
+## **Heard enough! How do I use it ??**
 Yeah I have talked enough as well.
 
 The first thing is, the service is built using `express` and contains a `index.js` file to be started with. So all you got to do is run the file through command line as `node index.js`.
@@ -59,9 +59,9 @@ But well I don't think you will be running it on your local machine. So I have s
 Doing all the steps mentioned above, you will have a working version of your service that works to receive data from the official API and works just like it. But currently due to the limitation of heorku, your API will sleep after 30 minutes of inactivity. Well it will not stop working but after that time the initial request will take a longer time.
 To overcome this limitation you can use service like <a href="https://uptimerobot.com" target="_blank">uptimerobot</a>
 
-## How can I believe you are not lying ??
+## **How can I believe you are not lying ??**
 Well I can understand it's hard to believe something you just read up on internet. But I got a proof of concept to prove my words.
 <a href="https://statscell.herokuapp.com" target="_blank">CLICK HERE TO OPEN PROOF OF CONCEPT</a>
 
-## Anything else ??
+## **Anything else ??**
 Thats all from me. But if you got anything you can contact me through my contact mail. But if it is some Bug or feature idea, simply report it over at the original Repository. I will be more than happy to hear feedback from you guys.
