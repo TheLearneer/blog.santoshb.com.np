@@ -3,6 +3,9 @@
 		<b-container v-for="(article, i) of articleList" :key="`article-${i}`" class="my-5">
 			<BlogCard :data="article" />
 		</b-container>
+		<div class="my-5">
+			<adsbygoogle />
+		</div>
 	</div>
 </template>
 

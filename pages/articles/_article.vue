@@ -33,6 +33,9 @@
 		<div class="py-5">
 			<AuthorDetilas :id="article.author" />
 		</div>
+		<div class="my-2">
+			<adsbygoogle />
+		</div>
 		<vue-disqus shortname="blog-santoshb" :identifier="article.id" :url="articleUrl" :title="completeTitle" />
 	</div>
 </template>
