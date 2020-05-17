@@ -5,7 +5,7 @@
 			The blog articles here are the result of problems to do lots of stuffs. On addition to that, there were no good articles to help through the problem always. Thus this blog was started to help lots of people <i>Like me</i> to help find an easy and effictive solution. The blog articles are supposed to have the solution to some problems that I faced and also articles to help beter understand some stuffs. But I cannot tell these are the best ones you can find around. So feedbacks regarding the article are always welcome.
 		</p>
 		<div class="text-center">
-			<b-img fluid src="@/assets/img/welcome.png" title="welcome to the blog" alt="welcome" />
+			<b-img-lazy fluid src="@/assets/img/welcome.png" title="welcome to the blog" alt="welcome" />
 		</div>
 		<div class="separator mt-4">
 			<span class="h2 font-weight-bold">Contributing</span>
@@ -26,7 +26,7 @@
 			<span class="h3 font-weight-bold">Github</span>
 		</div>
 		<div class="text-center">
-			<b-img src="@/assets/img/github.png" width="111" height="111" alt="Github Repository" title="Blog's github repository" />
+			<b-img-lazy src="@/assets/img/github.png" width="111" height="111" alt="Github Repository" title="Blog's github repository" />
 			<p class="font-weight-bold"><a href="https://gituhb.com/TheLearneer/blog.santoshb.com.np">Click Here</a></p>
 		</div>
 	</div>

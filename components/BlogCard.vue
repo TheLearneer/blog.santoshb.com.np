@@ -3,7 +3,7 @@
 		<b-row>
 			<b-col sm="12" lg="7">
 				<div class="image-top">
-					<b-img fluid :src="bannerImg" width="640" :alt="data.title" class="rounded shadow" />
+					<b-img-lazy fluid :src="bannerImg" width="640" :alt="data.title" class="rounded shadow" />
 				</div>
 			</b-col>
 			<b-col>

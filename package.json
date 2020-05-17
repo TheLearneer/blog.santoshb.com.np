@@ -1,6 +1,6 @@
 {
   "name": "santosh-blog",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Blog of Santosh Bhandari covering articles of lots of technical and programming related stuffs",
   "main": "index.js",
   "scripts": {
@@ -37,7 +37,7 @@
     "vue-material-design-icons": "^4.6.0"
   },
   "devDependencies": {
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2"
   }
 }

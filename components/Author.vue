@@ -5,10 +5,10 @@
 				<b-img fluid :src="authorImage" width="128" :alt="author.name" class="rounded-circle pb-3" />
 				<div>
 					<a :href="author.social.github" class="px-2" target="_blank">
-						<GithubIcon :size="24" v-if="author.social.github" :title="`${author.name}'s Github Profile`" fillColor="black" />
+						<GithubIcon size="32" v-if="author.social.github" :title="`${author.name}'s Github Profile`" fillColor="black" />
 					</a>
 					<a :href="author.social.website" class="px-2" target="_blank">
-						<WebsiteIcon :size="24" v-if="author.social.website" :title="`${author.name}'s Website`" fillColor="black" />
+						<WebsiteIcon size="32" v-if="author.social.website" :title="`${author.name}'s Website`" fillColor="black" />
 					</a>
 				</div>
 			</b-col>
