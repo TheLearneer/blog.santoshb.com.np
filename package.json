@@ -1,6 +1,6 @@
 {
   "name": "santosh-blog",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Blog of Santosh Bhandari covering articles of lots of technical and programming related stuffs",
   "main": "index.js",
   "scripts": {
@@ -26,17 +26,18 @@
   },
   "homepage": "https://github.com/TheLearneer/blog.santoshb.com.np#readme",
   "dependencies": {
+    "@nuxt/content": "^1.0.0",
     "@nuxtjs/google-adsense": "^1.1.3",
     "@nuxtjs/sitemap": "^2.3.0",
     "bootstrap-vue": "^2.14.0",
     "date-fns": "^2.13.0",
-    "frontmatter-markdown-loader": "^3.4.3",
-    "glob": "^7.1.6",
     "nuxt": "^2.12.2",
     "vue-disqus": "^3.0.5",
     "vue-material-design-icons": "^4.6.0"
   },
   "devDependencies": {
+    "@nuxt/components": "^0.2.5",
+    "@nuxtjs/netlify-files": "^1.2.0",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2"
   }

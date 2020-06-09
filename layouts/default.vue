@@ -30,9 +30,6 @@
 
 <script>
 export default {
-	components: {
-		ScrollToTop: () => import('@/components/ScrollToTop')
-	},
 	data() {
 		return {
 			navRoutes: [
