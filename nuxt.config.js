@@ -1,7 +1,3 @@
-import { head, modules } from './config';
-import glob from 'glob';
-import path from 'path';
-
 export default {
 	mode: 'universal',
 	css: [],
